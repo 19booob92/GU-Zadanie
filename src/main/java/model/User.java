@@ -23,7 +23,7 @@ public class User implements Serializable {
 		this.id = nextId++;
 		
 		this.address = builder.address;
-		this.allProductsCost = allProductsCost;
+		this.allProductsCost = builder.allProductsCost;
 		this.name = builder.name;
 		this.surname = builder.surname;
 	}

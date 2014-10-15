@@ -13,13 +13,19 @@ public class UserFactory {
 		List<User> users = new ArrayList<>();
 
 		User defaultUser = new User.UserBuilder().withName("Jan")
-				.withSurname("Kowalski").withAddress(null).build();
+				.withSurname("Kowalski")
+				.withAddress(null).build();
 
 		User defaultUser2 = new User.UserBuilder().withName("Jan")
-				.withSurname("Kowalski").withAddress(null).build();
+				.withSurname("Kowalski")
+				.withAllProductsCost(7L)
+				.withAddress(null)
+				.build();
 
 		User defaultUser3 = new User.UserBuilder().withName("Jan")
-				.withSurname("Kowalski").withAllProductsCost(5L).build();
+				.withSurname("Kowalski")
+				.withAllProductsCost(5L)
+				.build();
 
 		users.add(defaultUser);
 		users.add(defaultUser2);

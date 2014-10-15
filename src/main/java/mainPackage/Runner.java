@@ -31,7 +31,6 @@ public class Runner {
             return Integer.parseInt(minValue);
         } catch (Exception e) {
             System.out.println("Poblem z odczytaniem wyboru");
-            System.exit(1);
         }
         return 0;
 
@@ -52,7 +51,7 @@ public class Runner {
                 menuItem = Integer.parseInt(choice);
             } catch (Exception e) {
                 System.out.println("Poblem z odczytaniem wyboru");
-                System.exit(1);
+                continue;
             }
 
             switch (menuItem) {
@@ -60,7 +59,8 @@ public class Runner {
                 System.out.print(userService.getAllUsers());
                 break;
             case 2:
-                System.out.print(userService.getUsersWithGivenItemsCost(getMinValue()));
+                System.out.println("Podaj minimalna wartosc zamowien: ");
+                System.out.println(userService.getUsersWithGivenItemsCost(getMinValue()));
                 break;
             case 3:
                 System.exit(1);

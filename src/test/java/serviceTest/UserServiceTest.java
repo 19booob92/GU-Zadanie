@@ -64,4 +64,6 @@ public class UserServiceTest {
         
         List<User> returnedList = (List<User>) service.getUsersWithGivenItemsCost(2L);
     }
+    
+    
 }

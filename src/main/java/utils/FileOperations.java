@@ -89,6 +89,18 @@ public class FileOperations {
             dir.mkdir();
         }
     }
+    
+    static public void deleteAllUsers() {
+        File folder = new File(SAVE_URL);
+        File[] listOfFiles = folder.listFiles();
+        
+        for (int i = 0; i < listOfFiles.length; i++) {
+            File file = listOfFiles[i];
+            if (file.isFile() && file.getName().endsWith(".json")) {
+                file.delete();
+            }
+        }
+    }
 
     private static String getFileName(String name, long id) {
         StringBuilder fileName = new StringBuilder();
